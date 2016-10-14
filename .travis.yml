@@ -7,4 +7,4 @@ install:
 
 script:
  - docker ps | grep -q redaxscript
- - docker ps | grep -q database_mysql
+ - docker ps | grep -q mysql_database
