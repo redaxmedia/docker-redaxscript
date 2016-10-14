@@ -1,0 +1,8 @@
+services:
+ - docker
+
+install:
+ - docker build
+
+script:
+ - docker ps | grep -q redaxscript

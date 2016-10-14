@@ -1,0 +1,18 @@
+mysql_database:
+ container_name: mysql_database
+ image: mysql:5.7
+ ports:
+ - 3307:3306
+ environment:
+ - MYSQL_ROOT_PASSWORD=test
+ - MYSQL_DATABASE=test
+
+redaxscript:
+ container_name: redaxscript
+ build: ./
+ volumes:
+ - $PWD/../redaxscript:/var/www/html/
+ ports:
+ - 8080:80
+ links:
+ - mysql_database
