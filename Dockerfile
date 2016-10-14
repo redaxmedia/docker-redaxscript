@@ -16,5 +16,4 @@ COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod 777 /usr/local/bin/docker-entrypoint.sh
 
-EXPOSE 80
 ENTRYPOINT ["docker-entrypoint.sh"]
