@@ -6,4 +6,5 @@ install:
  - docker-compose up -d
 
 script:
- - docker ps
+ - docker ps | grep -q redaxscript
+ - docker ps | grep -q database_mysql
