@@ -16,6 +16,13 @@ pgsql:
  - POSTGRESQL_DATABASE=test
  - POSTGRESQL_PASSWORD=test
 
+smtp:
+ container_name: smtp
+ image: tophfr/mailcatcher
+ ports:
+ - 1080:80
+ - 1025:25
+
 redaxscript:
  container_name: redaxscript
  build: ./
@@ -24,5 +31,6 @@ redaxscript:
  ports:
  - 8080:80
  links:
+ - smtp
  - mysql
  - pgsql
