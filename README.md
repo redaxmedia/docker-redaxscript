@@ -9,6 +9,7 @@ Dockernized Redaxscript
 
 [![Build Status](https://img.shields.io/travis/redaxmedia/docker-redaxscript.svg?style=flat)](https://travis-ci.org/redaxmedia/docker-redaxscript)
 
+
 Grunt
 -----
 
@@ -18,7 +19,7 @@ Grunt
 Database
 --------
 
-Modify <code>docker-entrypoint.sh</code> to setup another database type:
+Modify <code>docker-entrypoint.sh</code> for another database type:
 
 <pre>php console.php config parse --db-url mysql://root:test@mysql/test</pre>
 
