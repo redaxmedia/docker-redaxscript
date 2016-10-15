@@ -4,8 +4,17 @@ mysql:
  ports:
  - 3307:3306
  environment:
- - MYSQL_ROOT_PASSWORD=test
  - MYSQL_DATABASE=test
+ - MYSQL_ROOT_PASSWORD=test
+
+pgsql:
+ container_name: pgsql
+ image: bitnami/postgresql:latest
+ ports:
+ - 5434:5433
+ environment:
+ - POSTGRESQL_DATABASE=test
+ - POSTGRESQL_PASSWORD=test
 
 redaxscript:
  container_name: redaxscript
@@ -16,3 +25,4 @@ redaxscript:
  - 8080:80
  links:
  - mysql
+ - pgsql

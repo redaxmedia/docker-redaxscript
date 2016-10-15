@@ -8,3 +8,4 @@ install:
 script:
  - docker ps | grep -q redaxscript
  - docker ps | grep -q mysql
+ - docker ps | grep -q pgsql

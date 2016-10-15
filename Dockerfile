@@ -1,9 +1,11 @@
 FROM ubuntu:16.04
+MAINTAINER Henry Ruhs <info@redaxmedia.com>
 
 VOLUME ["/var/www/html"]
 
-RUN apt-get update && apt-get install -y apache2 php php-cli libapache2-mod-php php-json php-mysql php-sqlite3 php-curl php-tidy php-intl php-mcrypt php-pear git curl zip
-
+RUN apt-get update
+RUN apt-get install -y apache2 curl git zip
+RUN apt-get install -y libapache2-mod-php php php-cli php-curl php-intl php-json php-mbstring php-mcrypt php-mysql php-pear php-pgsql php-sqlite3 php-tidy
 RUN pear install -a net_smtp mail_mime
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
