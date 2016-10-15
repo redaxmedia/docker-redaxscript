@@ -9,18 +9,19 @@ Dockernized Redaxscript
 
 [![Build Status](https://img.shields.io/travis/redaxmedia/docker-redaxscript.svg?style=flat)](https://travis-ci.org/redaxmedia/docker-redaxscript)
 
+Grunt
+-----
+
+<pre>docker exec redaxscript grunt {task}</pre>
+
 
 Database
 --------
 
-Modify <code>docker-entrypoint.sh</code> for MySQL:
+Modify <code>docker-entrypoint.sh</code> to setup another database type:
 
-<pre>php /var/www/html/console.php config parse --db-url mysql://root:test@mysql/test</pre>
+<pre>php console.php config parse --db-url mysql://root:test@mysql/test</pre>
 
-Modify <code>docker-entrypoint.sh</code> for PostgreSQL:
+<pre>php console.php config parse --db-url postgres://postgres:test@pgsql/test</pre>
 
-<pre>php /var/www/html/console.php config parse --db-url postgres://postgres:test@pgsql/test</pre>
-
-Modify <code>docker-entrypoint.sh</code> for SQLite:
-
-<pre>php /var/www/html/console.php config parse --db-url sqlite://test.sqlite</pre>
+<pre>php console.php config parse --db-url sqlite://test.sqlite</pre>
