@@ -6,6 +6,5 @@ install:
  - docker-compose up -d
 
 script:
- - docker exec redaxscript npm run phpunit-mysql-docker
  - docker exec redaxscript npm run phpunit-pgsql-docker
  - docker exec redaxscript npm run phpunit-sqlite
