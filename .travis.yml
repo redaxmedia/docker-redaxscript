@@ -6,7 +6,7 @@ install:
  - docker-compose up -d
 
 script:
- - docker ps | grep -q redaxscript
- - docker ps | grep -q smtp
- - docker ps | grep -q mysql
- - docker ps | grep -q pgsql
+ - docker-compose ps | grep -q redaxscript
+ - docker-compose ps | grep -q smtp
+ - docker-compose ps | grep -q mysql
+ - docker-compose ps | grep -q pgsql
