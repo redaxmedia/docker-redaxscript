@@ -10,6 +10,7 @@ RUN apt-get install -y libapache2-mod-php php php-cli php-curl php-intl php-json
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer global require hirak/prestissimo
+RUN npm install --global ied
 RUN npm install --global grunt-cli
 
 RUN a2enmod rewrite
