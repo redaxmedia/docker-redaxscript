@@ -10,3 +10,11 @@ script:
  - docker-compose ps | grep -q smtp
  - docker-compose ps | grep -q mysql
  - docker-compose ps | grep -q pgsql
+ 
+notifications:
+ email:
+ - team@redaxscript.com
+ irc:
+ - chat.freenode.net#redaxscript
+ webhooks:
+ - https://webhooks.gitter.im/e/ff9acda2e5faf42e3182
