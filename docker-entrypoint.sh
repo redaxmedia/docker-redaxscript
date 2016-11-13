@@ -4,7 +4,7 @@ rm -rf /var/www/html
 git clone https://github.com/redaxmedia/redaxscript.git .
 
 composer install
-IED_CACHE_DIR=.tmp ied install
+NODE_ENV=development IED_CACHE_DIR=.tmp ied install
 
 chmod -R 777 /var/www/html/
 php console.php config parse --db-url mysql://root:test@mysql/test
