@@ -8,10 +8,10 @@ Dockernized Redaxscript
 [![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/redaxmedia/redaxscript-docker)
 
 
-Grunt
------
+Getting started
+---------------
 
-<pre>docker exec redaxscript grunt {task}</pre>
+<pre>docker-compose up</pre>
 
 
 Database
@@ -24,3 +24,9 @@ Modify <code>docker-entrypoint.sh</code> for another database type:
 <pre>php console.php config parse --db-url postgres://postgres:test@pgsql/test</pre>
 
 <pre>php console.php config parse --db-url sqlite://test.sqlite</pre>
+
+
+Utilize Grunt
+-------------
+
+<pre>docker exec redaxscript grunt {task}</pre>
