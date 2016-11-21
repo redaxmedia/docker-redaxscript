@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 rm -rf /var/www/html
 git clone https://github.com/redaxmedia/redaxscript.git .
