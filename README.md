@@ -11,6 +11,12 @@ Dockernized Redaxscript
 Getting started
 ---------------
 
+Build or rebuild services:
+
+<pre>docker-compose build</pre>
+
+Create and start containers:
+
 <pre>docker-compose up</pre>
 
 
