@@ -3,8 +3,8 @@ Dockernized Redaxscript
 
 > Ultra lightweight Content Management System for SQLite, MySQL and PostgreSQL.
 
-[![Build Status](https://img.shields.io/travis/redaxmedia/redaxscript-docker.svg?style=flat)](https://travis-ci.org/redaxmedia/redaxscript-docker)
-[![Docker Automated build](https://img.shields.io/docker/automated/redaxmedia/redaxscript.svg)](https://hub.docker.com/r/redaxmedia/redaxscript/)
+[![Build Status](https://img.shields.io/travis/redaxmedia/redaxscript-docker.svg)](https://travis-ci.org/redaxmedia/redaxscript-docker)
+[![Docker Automated build](https://img.shields.io/docker/automated/redaxmedia/redaxscript.svg)](https://hub.docker.com/r/redaxmedia/redaxscript)
 [![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/redaxmedia/redaxscript-docker)
 
 
@@ -13,26 +13,38 @@ Getting started
 
 Build or rebuild services:
 
-<pre>docker-compose build</pre>
+```
+docker-compose build
+```
 
 Create and start containers:
 
-<pre>docker-compose up</pre>
+```
+docker-compose up
+```
 
 
 Database
 --------
 
-Modify <code>docker-entrypoint.sh</code> for another database type:
+Modify `docker-entrypoint.sh` for another database type:
 
-<pre>php console.php config parse --db-url mysql://root:test@mysql/test</pre>
+```
+php console.php config parse --db-url mysql://root:test@mysql/test
+```
 
-<pre>php console.php config parse --db-url postgres://postgres:test@pgsql/test</pre>
+```
+php console.php config parse --db-url postgres://postgres:test@pgsql/test
+```
 
-<pre>php console.php config parse --db-url sqlite://test.sqlite</pre>
+```
+<pre>php console.php config parse --db-url sqlite://test.sqlite
+```
 
 
 Utilize Grunt
 -------------
 
-<pre>docker exec redaxscript grunt {task}</pre>
+```
+docker exec redaxscript grunt {task}
+```
