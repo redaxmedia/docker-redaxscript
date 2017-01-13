@@ -38,7 +38,7 @@ php console.php config parse --db-url postgres://postgres:test@pgsql/test
 ```
 
 ```
-<pre>php console.php config parse --db-url sqlite://test.sqlite
+php console.php config parse --db-url sqlite://test.sqlite
 ```
 
 
