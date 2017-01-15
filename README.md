@@ -8,8 +8,14 @@ Dockernized Redaxscript
 [![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/redaxmedia/redaxscript-docker)
 
 
-Getting started
----------------
+Terminal
+--------
+
+Docker pull command:
+
+```
+docker pull redaxmedia/redaxscript
+```
 
 Build or rebuild services:
 
@@ -42,9 +48,19 @@ php console.php config parse --db-url sqlite://test.sqlite
 ```
 
 
-Utilize Grunt
--------------
+Grunt
+-----
+
+Run Grunt inside the container:
 
 ```
 docker exec redaxscript grunt {task}
+```
+
+
+Browser
+-------
+
+```
+http://localhost:8080
 ```
