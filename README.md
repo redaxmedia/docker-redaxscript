@@ -11,7 +11,7 @@ Dockernized Redaxscript
 Terminal
 --------
 
-Docker pull command:
+Pull from the Docker hub:
 
 ```
 docker pull redaxmedia/redaxscript
@@ -30,24 +30,6 @@ docker-compose up
 ```
 
 
-Database
---------
-
-Modify `docker-entrypoint.sh` for another database type:
-
-```
-php console.php config parse --db-url mysql://root:test@mysql/test
-```
-
-```
-php console.php config parse --db-url postgres://postgres:test@pgsql/test
-```
-
-```
-php console.php config parse --db-url sqlite://test.sqlite
-```
-
-
 Grunt
 -----
 
@@ -60,6 +42,8 @@ docker exec redaxscript grunt {task}
 
 Browser
 -------
+
+Browse your working copy:
 
 ```
 http://localhost:8080
