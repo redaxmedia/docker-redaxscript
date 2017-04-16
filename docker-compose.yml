@@ -1,17 +1,26 @@
+mssql:
+ container_name: mssql
+ image: microsoft/mssql-server-linux
+ ports:
+ - 1430:1433
+ environment:
+ - ACCEPT_EULA=Y
+ - SA_PASSWORD=tPSCp0G0mZ
+
 mysql:
  container_name: mysql
  image: mysql:5.7
  ports:
- - 3307:3306
+ - 3300:3306
  environment:
  - MYSQL_DATABASE=test
  - MYSQL_ROOT_PASSWORD=test
 
 pgsql:
  container_name: pgsql
- image: bitnami/postgresql:latest
+ image: bitnami/postgresql
  ports:
- - 5434:5433
+ - 5430:5433
  environment:
  - POSTGRESQL_DATABASE=test
  - POSTGRESQL_PASSWORD=test
@@ -31,6 +40,7 @@ redaxscript:
  ports:
  - 8080:80
  links:
- - smtp
+ - mssql
  - mysql
  - pgsql
+ - smtp

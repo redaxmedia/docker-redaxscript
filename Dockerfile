@@ -1,12 +1,16 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 MAINTAINER Henry Ruhs <info@redaxmedia.com>
 
 VOLUME ["/var/www/html"]
 WORKDIR /var/www/html
 
 RUN apt-get --yes update
-RUN apt-get --yes install apache2 curl fontforge git mysql-client npm postgresql ssmtp sqlite3 zip
-RUN apt-get --yes install libapache2-mod-php php php-cli php-curl php-intl php-json php-mbstring php-mcrypt php-mysql php-pear php-pgsql php-sqlite3 php-tidy php-xdebug
+RUN apt-get --yes install apache2 curl fontforge git npm unixodbc-dev ssmtp sqlite3 zip
+RUN apt-get --yes install libapache2-mod-php php php-cli php-curl php-dev php-intl php-json php-mbstring php-mcrypt php-mysql php-pear php-pgsql php-sqlite3 php-tidy php-xdebug
+
+RUN pecl install pdo_sqlsrv
+RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini
+RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/cli/php.ini
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer global require hirak/prestissimo
