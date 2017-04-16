@@ -1,11 +1,14 @@
 mssql:
  container_name: mssql
- image: microsoft/mssql-server-linux
+ image: datagrip/mssql-server-linux
  ports:
  - 1430:1433
  environment:
  - ACCEPT_EULA=Y
  - SA_PASSWORD=tPSCp0G0mZ
+ - MSSQL_DB=test
+ - MSSQL_USER=sa
+ - MSSQL_PASSWORD=tPSCp0G0mZ
 
 mysql:
  container_name: mysql

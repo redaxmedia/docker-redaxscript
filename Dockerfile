@@ -1,12 +1,18 @@
-FROM ubuntu:17.04
+FROM ubuntu:16.04
 MAINTAINER Henry Ruhs <info@redaxmedia.com>
 
 VOLUME ["/var/www/html"]
 WORKDIR /var/www/html
 
 RUN apt-get --yes update
-RUN apt-get --yes install apache2 curl fontforge git npm unixodbc-dev ssmtp sqlite3 zip
+RUN apt-get --yes install apache2 apt-transport-https curl fontforge git npm ssmtp sqlite3 unixodbc-dev wget zip
 RUN apt-get --yes install libapache2-mod-php php php-cli php-curl php-dev php-intl php-json php-mbstring php-mcrypt php-mysql php-pear php-pgsql php-sqlite3 php-tidy php-xdebug
+
+RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+RUN curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+RUN apt-get --yes update
+RUN ACCEPT_EULA=Y apt-get --yes install msodbcsql
 
 RUN pecl install pdo_sqlsrv
 RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/apache2/php.ini

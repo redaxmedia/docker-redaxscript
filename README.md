@@ -29,14 +29,10 @@ Create and start containers:
 docker-compose up
 ```
 
-
-Grunt
------
-
-Run Grunt inside the container:
+Run interactive shell in container:
 
 ```
-docker exec redaxscript grunt {task}
+docker exec -it redaxscript /bin/bash
 ```
 
 
