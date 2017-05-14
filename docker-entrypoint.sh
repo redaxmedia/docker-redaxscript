@@ -2,7 +2,7 @@
 
 chmod --recursive 777 /var/www/html
 rm -rf /var/www/html
-git clone https://github.com/redaxmedia/redaxscript.git --branch develop .
+git clone https://github.com/redaxmedia/redaxscript.git .
 
 composer install
 IED_CACHE_DIR=.tmp ied install
