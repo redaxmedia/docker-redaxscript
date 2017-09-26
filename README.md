@@ -11,10 +11,10 @@ Dockernized Redaxscript
 Terminal
 --------
 
-Pull from the Docker hub:
+Clone from GitHub:
 
 ```
-docker pull redaxmedia/redaxscript
+git clone https://github.com/redaxmedia/redaxscript-docker.git
 ```
 
 Build or rebuild services:
