@@ -5,7 +5,6 @@ Dockernized Redaxscript
 
 [![Build Status](https://img.shields.io/travis/redaxscript/redaxscript-docker.svg)](https://travis-ci.org/redaxscript/redaxscript-docker)
 [![Docker Automated build](https://img.shields.io/docker/automated/redaxmedia/redaxscript.svg)](https://hub.docker.com/r/redaxmedia/redaxscript)
-[![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](https://githubstats.com/redaxscript/redaxscript-docker)
 
 
 Terminal
