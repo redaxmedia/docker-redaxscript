@@ -5,7 +5,7 @@ rm -rf /var/www/html
 git clone https://github.com/redaxscript/redaxscript.git .
 
 composer install
-IED_CACHE_DIR=.tmp ied install
+npm install
 
 grunt build
 
