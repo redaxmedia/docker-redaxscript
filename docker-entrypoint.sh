@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-chmod --recursive 777 /var/www/html
-rm -rf /var/www/html
 git clone https://github.com/redaxscript/redaxscript.git .
 
 composer install
