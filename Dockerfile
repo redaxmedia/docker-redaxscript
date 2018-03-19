@@ -20,7 +20,6 @@ RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.0/cli/php.ini
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer global require hirak/prestissimo
-RUN npm install --global ied
 RUN npm install --global grunt-cli
 
 RUN a2enmod rewrite
