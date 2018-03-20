@@ -1,6 +1,8 @@
 mssql:
  container_name: mssql
  image: datagrip/mssql-server-linux
+ volumes:
+ - $PWD/../mssql:/var/opt/mssql/log
  environment:
  - ACCEPT_EULA=Y
  - SA_PASSWORD=tPSCp0G0mZ
@@ -30,7 +32,7 @@ redaxscript:
  container_name: redaxscript
  build: ./
  volumes:
- - $PWD/../redaxscript:/var/www/html/
+ - $PWD/../redaxscript:/var/www/html
  ports:
  - 8080:80
  links:
