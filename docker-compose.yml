@@ -5,10 +5,10 @@ mssql:
  - $PWD/../mssql:/var/opt/mssql/log
  environment:
  - ACCEPT_EULA=Y
- - SA_PASSWORD=tPSCp0G0mZ
+ - SA_PASSWORD=test
  - MSSQL_DB=test
  - MSSQL_USER=sa
- - MSSQL_PASSWORD=tPSCp0G0mZ
+ - MSSQL_PASSWORD=test
 
 mysql:
  container_name: mysql
