@@ -15,7 +15,7 @@ Clone from GitHub:
 git clone https://github.com/redaxscript/redaxscript-docker.git
 ```
 
-Start the containers:
+Run the container:
 
 ```
 docker-compose up
