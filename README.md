@@ -6,8 +6,8 @@ Redaxscript Docker
 [![Build Status](https://img.shields.io/travis/redaxscript/redaxscript-docker.svg)](https://travis-ci.org/redaxscript/redaxscript-docker)
 
 
-Terminal
---------
+Installation
+------------
 
 Clone from GitHub:
 
@@ -27,15 +27,15 @@ Create and start the containers:
 docker-compose up
 ```
 
+
+Usage
+-----
+
 Run interactive shell inside the container:
 
 ```
 docker exec -it redaxscript /bin/bash
 ```
-
-
-Browser
--------
 
 Browse your working copy:
 
