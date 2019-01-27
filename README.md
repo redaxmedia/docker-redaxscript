@@ -15,13 +15,7 @@ Clone from GitHub:
 git clone https://github.com/redaxscript/redaxscript-docker.git
 ```
 
-Build the services:
-
-```
-docker-compose build
-```
-
-Create and start the containers:
+Start the containers:
 
 ```
 docker-compose up
@@ -30,12 +24,6 @@ docker-compose up
 
 Usage
 -----
-
-Run interactive shell inside the container:
-
-```
-docker exec -it redaxscript /bin/bash
-```
 
 Browse your working copy:
 
