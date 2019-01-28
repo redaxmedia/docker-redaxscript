@@ -1,5 +1,7 @@
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 MAINTAINER Henry Ruhs <info@redaxmedia.com>
+
+ENV DEBIAN_FRONTEND noninteractive
 
 WORKDIR /var/www/html
 
@@ -11,14 +13,14 @@ RUN curl -sL https://deb.nodesource.com/setup_9.x | bash
 RUN apt-get --yes install nodejs
 
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-RUN curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+RUN curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 RUN apt-get --yes update
 RUN ACCEPT_EULA=Y apt-get --yes install msodbcsql17
 
 RUN pecl install pdo_sqlsrv
-RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/apache2/php.ini
-RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.1/cli/php.ini
+RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+RUN echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/cli/php.ini
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer global require hirak/prestissimo
