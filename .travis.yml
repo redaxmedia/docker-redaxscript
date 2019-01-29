@@ -2,12 +2,10 @@ services:
 - docker
 
 install:
-- docker-compose build
 - docker-compose up -d
 
 script:
 - docker-compose ps | grep -q redaxscript
-- docker-compose ps | grep -q mssql
 - docker-compose ps | grep -q mysql
 - docker-compose ps | grep -q pgsql
 - docker-compose ps | grep -q smtp

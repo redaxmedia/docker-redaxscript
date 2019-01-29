@@ -1,15 +1,3 @@
-mssql:
- container_name: mssql
- image: datagrip/mssql-server-linux
- volumes:
- - $PWD/../mssql:/var/opt/mssql/log
- environment:
- - ACCEPT_EULA=Y
- - SA_PASSWORD=test
- - MSSQL_DB=test
- - MSSQL_USER=sa
- - MSSQL_PASSWORD=test
-
 mysql:
  container_name: mysql
  image: mysql
@@ -30,13 +18,14 @@ smtp:
 
 redaxscript:
  container_name: redaxscript
- build: ./
+ environment:
+ - TAG=4.0.0-beta.2
+ build: .
  volumes:
  - $PWD/../redaxscript:/var/www/html
  ports:
  - 8080:80
  links:
- - mssql
  - mysql
  - pgsql
  - smtp
