@@ -7,10 +7,10 @@ mysql:
 
 pgsql:
  container_name: pgsql
- image: bitnami/postgresql
+ image: postgres
  environment:
- - POSTGRESQL_DATABASE=test
- - POSTGRESQL_PASSWORD=test
+ - POSTGRES_DB=test
+ - POSTGRES_PASSWORD=test
 
 smtp:
  container_name: smtp
@@ -18,8 +18,6 @@ smtp:
 
 redaxscript:
  container_name: redaxscript
- environment:
- - TAG=4.0.0-beta.2
  build: .
  volumes:
  - $PWD/../redaxscript:/var/www/html
