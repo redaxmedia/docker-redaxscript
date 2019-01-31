@@ -9,7 +9,7 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
 
 RUN apk update
 RUN apk add bash composer curl fontforge git nodejs nodejs-npm ssmtp sqlite
-RUN apk add php php-cli php-curl php-dom php-session php-tokenizer php-opcache php-pdo_sqlite php-pdo_mysql php-pdo_pgsql php-simplexml php-xml php-xmlwriter php-zip
+RUN apk add php php-cli php-curl php-ctype php-dom php-session php-tokenizer php-opcache php-pdo_sqlite php-pdo_mysql php-pdo_pgsql php-simplexml php-xml php-xmlwriter php-zip
 
 RUN composer global require hirak/prestissimo
 RUN npm install grunt-cli --global
