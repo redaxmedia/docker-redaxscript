@@ -28,5 +28,5 @@ Usage
 Browse your working copy:
 
 ```
-http://localhost:9000
+http://localhost:8000
 ```

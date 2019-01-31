@@ -22,7 +22,7 @@ redaxscript:
  volumes:
  - $PWD/../redaxscript:/var/www/html
  ports:
- - 9000:8000
+ - 8000:8000
  links:
  - mysql
  - pgsql
