@@ -1,25 +1,18 @@
-FROM ubuntu:18.04
+FROM alpine:3.9
 MAINTAINER Henry Ruhs <info@redaxmedia.com>
-
-ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /var/www/html
 
-RUN apt-get update
-RUN apt-get install apache2 apt-transport-https curl fontforge git ssmtp sqlite3 wget zip --yes
-RUN apt-get install libapache2-mod-php php php-cli php-curl php-dev php-intl php-json php-mbstring php-mysql php-pgsql php-sqlite3 php-tidy php-xdebug php-zip --yes
+RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/main >> /etc/apk/repositories
+RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories
+RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 
-RUN curl https://deb.nodesource.com/setup_10.x | bash
-RUN apt-get install nodejs --yes
-
-RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN apk update
+RUN apk add bash composer curl fontforge git nodejs nodejs-npm ssmtp sqlite
+RUN apk add php php-cli php-curl php-dom php-session php-tokenizer php-opcache php-pdo_sqlite php-pdo_mysql php-pdo_pgsql php-simplexml php-xml php-xmlwriter php-zip
 
 RUN composer global require hirak/prestissimo
 RUN npm install grunt-cli --global
-
-RUN a2enmod deflate
-RUN a2enmod headers
-RUN a2enmod rewrite
 
 COPY ssmtp.conf /etc/ssmtp/ssmtp.conf
 COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
