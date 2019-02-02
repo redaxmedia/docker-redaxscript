@@ -8,7 +8,7 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/community >> /etc/apk/reposit
 RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 
 RUN apk update
-RUN apk add bash composer curl fontforge git gcc make nodejs nodejs-npm ssmtp
+RUN apk add bash chromium composer curl fontforge git g++ gcc make nodejs nodejs-npm ssmtp
 RUN apk add php php-cli php-curl php-ctype php-dom php-gd php-session php-tokenizer php-opcache php-pdo_sqlite php-pdo_mysql php-pdo_pgsql php-simplexml php-xml php-xmlwriter php-zip
 
 RUN composer global require hirak/prestissimo
