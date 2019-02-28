@@ -5,6 +5,6 @@ git clone https://github.com/redaxscript/redaxscript.git .
 composer install
 npm install
 
-chmod 777 . -R
+chmod 777 . --recursive
 
 grunt serve
