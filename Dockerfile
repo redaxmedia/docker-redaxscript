@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:edge
 MAINTAINER Henry Ruhs <info@redaxmedia.com>
 
 WORKDIR /var/www/html
