@@ -1,0 +1,19 @@
+name: ci
+
+on:
+ push:
+ pull_request:
+ schedule:
+ - cron: 0 0 * * *
+
+jobs:
+ test:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - run: docker-compose up --detach
+  - run: docker-compose ps | grep --quiet redaxscript
+  - run: docker-compose ps | grep --quiet mysql
+  - run: docker-compose ps | grep --quiet pgsql
+  - run: docker-compose ps | grep --quiet smtp
