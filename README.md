@@ -3,7 +3,7 @@ Redaxscript Docker
 
 > A modern, ultra lightweight and rocket fast Content Management System for SQLite, MSSQL, MySQL and PostgreSQL.
 
-[![Build Status](https://img.shields.io/travis/redaxscript/redaxscript-docker.svg)](https://travis-ci.org/redaxscript/redaxscript-docker)
+[![Build Status](https://img.shields.io/github/workflow/status/redaxscript/redaxscript-docker/ci.svg)](https://github.com/redaxscript/redaxscript-docker/actions?query=workflow:ci)
 
 
 Installation
